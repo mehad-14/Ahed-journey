@@ -1,76 +1,107 @@
-    @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@600&display=swap');
 
-    body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      color: #4a4e69;
-    }
-    .container {
-      max-width: 720px;
-      margin: auto;
-      padding: 30px 20px;
-      text-align: center;
-      background-color: #fff;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
-      margin-top: 40px;
-    }
-    h1 {
-      font-size: 56px;
-      margin-bottom: 20px;
-      color: #ff4081;
-      font-weight: bold;
-    }
-    .welcome-screen {
-      display: block;
-    }
-    .scene {
-      display: none;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .scene.active {
-      display: block;
-      opacity: 1;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    img {
-      max-width: 80%;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .text {
-      font-size: 24px;
-      line-height: 2.2;
-      background-color: #ffe3ec;
-      padding: 25px;
-      border-radius: 20px;
-      margin-bottom: 25px;
-      color: #5b2c6f;
-      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
-    }
-    button {
-      background-color: #ff6f91;
-      color: white;
-      border: none;
-      padding: 14px 24px;
-      border-radius: 16px;
-      font-size: 40px;
-      cursor: pointer;
-      margin: 10px;
-      transition: transform 0.2s, background 0.3s;
-    }
-    button:hover {
-      background-color: #e05275;
-      transform: scale(1.05);
-    }
-    audio {
-      display: none;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@600&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #4a4e69;
+  background: linear-gradient(to bottom, #fff7e6, #ffd1dc);
+}
+
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 7vw; /* مرن */
+  margin-bottom: 20px;
+  color: #ff4081;
+  font-weight: bold;
+}
+
+.welcome-screen {
+  display: block;
+}
+
+.scene {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.scene.active {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+img {
+  max-width: 90%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.text {
+  font-size: 5vw;
+  line-height: 2;
+  background-color: #ffe3ec;
+  padding: 6vw;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  color: #5b2c6f;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+}
+
+button {
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  padding: 4vw 6vw;
+  border-radius: 16px;
+  font-size: 5.5vw;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background-color: #e05275;
+  transform: scale(1.05);
+}
+
+audio {
+  display: none;
+}
+
+/* 📱 Media Query للشاشات الصغيرة جدًا */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 9vw;
+  }
+
+  .text {
+    font-size: 6vw;
+    padding: 5vw;
+  }
+
+  button {
+    font-size: 6vw;
+    padding: 5vw 8vw;
+  }
+}
+
